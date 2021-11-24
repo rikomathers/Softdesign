@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">TZ</string>
+    <string name="portfolio_appraisal">Оценка портфеля</string>
+    <string name="in_share">В акциях</string>
+    <string name="balance_of_USD">Остаток USD</string>
+    <string name="balance_of_RUB">Остаток RUB</string>
+    <string name="replenished">Пополнено</string>
+    <string name="withdrawn">Выведено</string>
+    <string name="replenished_RUB">Пополнено RUB</string>
+    <string name="withdrawn_RUB">Выведено RUB</string>
+    <string name="profit_from_shares">Прибыль с акций</string>
+    <string name="invested">Инвестировано</string>
+    <string name="total_cost">Общая стоимость</string>
+    <string name="expected_bonus">Ожидаемый бонус</string>
+    <string name="in_team">В команде</string>
+
+</resources>
