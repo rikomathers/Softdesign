@@ -1,6 +1,4 @@
-package com.example.tz
-
-import androidx.recyclerview.widget.RecyclerView
+package com.example.tz.business
 
 data class GradeRowType(
     val portfolioAppraisal: String,
@@ -10,6 +8,6 @@ data class GradeRowType(
     val balanceOfRUB: String
 ) : RowType {
     override fun getItemViewType(): Int {
-        return 1
+        return RowType.grade
     }
 }

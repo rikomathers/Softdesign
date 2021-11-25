@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
     <FrameLayout
         android:clickable="true"
-        android:id="@+id/ivRUB"
+        android:id="@+id/btRUB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="@id/tvExpectedBonus"
@@ -41,11 +41,11 @@
 
     <FrameLayout
         android:clickable="true"
-        android:id="@+id/ivUSD"
+        android:id="@+id/btUSD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@+id/ivRUB"
-        app:layout_constraintTop_toTopOf="@+id/ivRUB"
+        app:layout_constraintStart_toEndOf="@+id/btRUB"
+        app:layout_constraintTop_toTopOf="@+id/btRUB"
         android:layout_marginStart="5dp"
         android:focusable="true">
 

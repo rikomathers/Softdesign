@@ -126,7 +126,7 @@
                 android:textColor="#66000000"
                 android:textSize="12sp"/>
             <TextView
-                android:id="@+id/tvTotalСost"
+                android:id="@+id/tvTotalCost"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/sf_pro_display"
