@@ -9,6 +9,7 @@
     android:layout_marginVertical="12dp"
     android:background="@drawable/item_bg"
     android:backgroundTint="#F6C5EF">
+
     <ImageView
         android:id="@+id/ivIcInfo"
         android:layout_width="wrap_content"

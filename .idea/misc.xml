@@ -9,10 +9,12 @@
         <entry key="..\:/Users/rikom/AndroidStudioProjects/TZ/app/src/main/res/drawable/ic_usd.xml" value="0.2703125" />
         <entry key="..\:/Users/rikom/AndroidStudioProjects/TZ/app/src/main/res/drawable/item_bg.xml" value="0.2703125" />
         <entry key="..\:/Users/rikom/AndroidStudioProjects/TZ/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/rikom/AndroidStudioProjects/TZ/app/src/main/res/layout/fragment_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/rikom/AndroidStudioProjects/TZ/app/src/main/res/layout/recycler_item1.xml" value="0.264" />
         <entry key="..\:/Users/rikom/AndroidStudioProjects/TZ/app/src/main/res/layout/recycler_item2.xml" value="0.6" />
         <entry key="..\:/Users/rikom/AndroidStudioProjects/TZ/app/src/main/res/layout/recycler_item3.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/rikom/AndroidStudioProjects/TZ/app/src/main/res/layout/recycler_item4.xml" value="0.536" />
+        <entry key="..\:/Users/rikom/AndroidStudioProjects/TZ/app/src/main/res/layout/recycler_item_grade.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>
