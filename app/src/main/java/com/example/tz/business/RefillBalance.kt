@@ -1,13 +1,13 @@
 package com.example.tz.business
 
-data class RefillRowType(
+data class RefillBalance(
     val replenished: String,
     val withdrawn: String,
     val replenishedRUB: String,
     val withdrawnRUB: String
-): RowType {
+): Balance {
 
-    override fun getItemViewType(): Int {
-        return RowType.refill
+    override fun getBalanceType(): Int {
+        return Balance.refill
     }
 }

@@ -3,12 +3,12 @@ package com.example.tz
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.tz.business.RowType
+import com.example.tz.business.Balance
 
 class MultipleTypesAdapter : RecyclerView.Adapter<ViewHolderFactory>() {
-    var rowItemsList = ArrayList<RowType>()
+    var rowItemsList = ArrayList<Balance>()
         private set
-    fun setRowItems(rowItemsList: List<RowType>){
+    fun setRowItems(rowItemsList: List<Balance>){
         this.rowItemsList.clear()
         this.rowItemsList.addAll(rowItemsList)
         notifyDataSetChanged()
@@ -20,15 +20,15 @@ class MultipleTypesAdapter : RecyclerView.Adapter<ViewHolderFactory>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderFactory {
         val layoutInflater = LayoutInflater.from(parent.context)
         when(viewType){
-            RowType.grade ->{
+            Balance.grade ->{
                 val view = layoutInflater.inflate(R.layout.recycler_item_grade,parent, false)
                 return ViewHolderFactory.GradeViewHolder(view)
             }
-            RowType.refill ->{
+            Balance.refill ->{
                 val view = layoutInflater.inflate(R.layout.recycler_item_refill,parent, false)
                 return ViewHolderFactory.RefillViewHolder(view)
             }
-            RowType.profit ->{
+            Balance.profit ->{
                 val view = layoutInflater.inflate(R.layout.recycler_item_profit,parent, false)
                 return ViewHolderFactory.ProfitViewHolder(view)
             }

@@ -1,13 +1,13 @@
 package com.example.tz.business
 
-data class BonusRowType(
+data class BonusBalance(
     val expectedBonus: String,
     val inTeam: String,
     val replenishedRUB: String,
     val withdrawnRUB: String
-) : RowType {
+) : Balance {
 
-    override fun getItemViewType(): Int {
-        return RowType.bonus
+    override fun getBalanceType(): Int {
+        return Balance.bonus
     }
 }

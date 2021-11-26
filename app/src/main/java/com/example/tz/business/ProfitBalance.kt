@@ -1,12 +1,12 @@
 package com.example.tz.business
 
-data class ProfitRowType(
+data class ProfitBalance(
     val profitFromShares: String,
     val percent: String,
     val invested: String,
     val totalCost: String
-): RowType {
-    override fun getItemViewType(): Int {
-        return RowType.profit
+): Balance {
+    override fun getBalanceType(): Int {
+        return Balance.profit
     }
 }

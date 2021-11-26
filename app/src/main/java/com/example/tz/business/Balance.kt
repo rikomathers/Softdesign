@@ -2,12 +2,12 @@ package com.example.tz.business
 
 import androidx.recyclerview.widget.RecyclerView
 
-interface RowType {
+interface Balance {
     companion object {
         const val grade =  1
         const val refill = 2
         const val profit = 3
         const val bonus = 4
     }
-    fun getItemViewType():Int
+    fun getBalanceType():Int
 }
