@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
+import com.example.tz.business.RowType
 import com.example.tz.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
