@@ -14,7 +14,7 @@ class MultipleTypesAdapter : RecyclerView.Adapter<ViewHolderFactory>() {
         notifyDataSetChanged()
     }
     override fun getItemViewType(position: Int): Int {
-        return rowItemsList[position].getItemViewType()
+        return rowItemsList[position].getBalanceType()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderFactory {

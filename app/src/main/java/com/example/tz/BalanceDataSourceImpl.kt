@@ -1,5 +1,6 @@
 package com.example.tz
 
+import SecureHeadersInterceptor
 import android.util.Log
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import okhttp3.OkHttpClient
@@ -24,7 +25,7 @@ object BalanceDataSourceImpl {
 
     private val balanceService: BalanceService by lazy {
         Retrofit.Builder()
-            .baseUrl("https://sandbox.skill-branch.ru/dashboards/")
+            .baseUrl("https://sandbox.skill-branch.ru")
             .client(
                 provideOkHttpClient(
                     httpLoggingInterceptor = provideLoggingInterceptor(),
@@ -44,8 +45,10 @@ object BalanceDataSourceImpl {
         return OkHttpClient.Builder()
             .addInterceptor(httpLoggingInterceptor)
             .addInterceptor(headerInterceptor)
+//            .addNetworkInterceptor(SecureHeadersInterceptor())
             .connectTimeout(CONNECT_TIMEOUT_SECONDS, TimeUnit.SECONDS)
             .readTimeout(READ_TIMEOUT_SECONDS, TimeUnit.SECONDS)
+
             .build()
     }
 
