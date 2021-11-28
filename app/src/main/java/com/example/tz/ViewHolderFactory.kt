@@ -2,11 +2,11 @@ package com.example.tz
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
-import com.example.tz.business.*
 import com.example.tz.databinding.RecyclerItemBonusBinding
 import com.example.tz.databinding.RecyclerItemGradeBinding
 import com.example.tz.databinding.RecyclerItemProfitBinding
 import com.example.tz.databinding.RecyclerItemRefillBinding
+import com.example.tz.presentation.adapter.*
 
 open class ViewHolderFactory(itemView: View) : RecyclerView.ViewHolder(itemView) {
     open fun bind(balance: Balance){}
@@ -15,8 +15,14 @@ open class ViewHolderFactory(itemView: View) : RecyclerView.ViewHolder(itemView)
         private val binding = RecyclerItemGradeBinding.bind(itemView)
         override fun bind(balance: Balance) {
             (balance as GradeBalance)
-            binding.tvPortfolioAppraisal.text = balance.portfolioAppraisal
-            binding.tvPercent.text = balance.percent
+            binding.tvPortfolioAppraisal.text =binding.root.context?.getString(
+                R.string.dollars,
+                balance.portfolioAppraisal
+            )
+            binding.tvPercent.text = binding.root.context?.getString(
+                R.string.percent,
+                balance.percent
+            )
             binding.tvInShare.text = balance.inShare
             binding.tvBalanceOfUSD.text = balance.balanceOfUSD
             binding.tvBalanceOfRUB.text = balance.balanceOfUSD

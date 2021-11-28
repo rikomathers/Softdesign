@@ -13,5 +13,7 @@
     <string name="total_cost">Общая стоимость</string>
     <string name="expected_bonus">Ожидаемый бонус</string>
     <string name="in_team">В команде</string>
+    <string name="dollars">%1$s $</string>
+    <string name="percent">%1$s \%%</string>
 
 </resources>

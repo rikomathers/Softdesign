@@ -1,4 +1,4 @@
-package com.example.tz.business
+package com.example.tz.presentation.adapter
 
 data class ProfitBalance(
     val profitFromShares: String,

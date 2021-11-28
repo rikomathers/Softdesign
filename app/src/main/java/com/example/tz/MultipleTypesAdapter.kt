@@ -3,7 +3,7 @@ package com.example.tz
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.tz.business.Balance
+import com.example.tz.presentation.adapter.Balance
 
 class MultipleTypesAdapter : RecyclerView.Adapter<ViewHolderFactory>() {
     var rowItemsList = ArrayList<Balance>()
