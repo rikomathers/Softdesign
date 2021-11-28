@@ -2,11 +2,10 @@ package com.example.tz.business.domain
 
 import com.google.gson.annotations.SerializedName
 
-data class Grade(
+data class Profit(
     val total: Double? = null,
     val raise: Double? = null,
-    val stock: Double? = null,
-    val balanceUSD: Double? = null,
-    val balanceRUB: Double? = null,
-    val about: String? = null,
+    val invest: Double? = null,
+    val price: Double? = null,
+    val about: String? = null
 )

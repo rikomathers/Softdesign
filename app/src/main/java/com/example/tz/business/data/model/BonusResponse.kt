@@ -1,5 +1,7 @@
 package com.example.tz.business.data.model
 
+import com.example.tz.business.domain.Bonus
+import com.example.tz.business.domain.Grade
 import com.google.gson.annotations.SerializedName
 
 class BonusResponse {
@@ -20,11 +22,19 @@ class BonusResponse {
     val refillRUB: Double? = null
 
     @SerializedName("about")
-    val about: Double? = null
+    val about: String? = null
 
     override fun toString(): String {
         return "com.example.tz.business.data.model.BonusResponse(totalRUB=$totalRUB, totalUSD=$totalUSD, team=$team, refillUSD=$refillUSD, refillRUB=$refillRUB, about=$about)"
     }
-
-
+}
+fun BonusResponse.toBonus(): Bonus {
+    return Bonus(
+        totalRUB = totalRUB,
+        totalUSD = totalUSD,
+        team = team,
+        refillUSD = refillUSD,
+        refillRUB = refillRUB,
+        about = about
+    )
 }

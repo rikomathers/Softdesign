@@ -1,5 +1,6 @@
 package com.example.tz.business.data.model
 
+import com.example.tz.business.domain.Profit
 import com.google.gson.annotations.SerializedName
 
 class ProfitResponse {
@@ -21,6 +22,13 @@ class ProfitResponse {
     override fun toString(): String {
         return "com.example.tz.business.data.model.ProfitResponse(total=$total, raise=$raise, invest=$invest, price=$price, about=$about)"
     }
-
-
+}
+fun ProfitResponse.toProfit(): Profit {
+    return Profit(
+        total = total,
+        raise = raise,
+        invest = invest,
+        price = price,
+        about = about
+    )
 }
