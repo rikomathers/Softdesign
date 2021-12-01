@@ -1,4 +1,4 @@
-package com.example.tz
+package com.example.tz.framework.presentation
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -9,17 +9,20 @@ import com.example.tz.business.domain.GetBonus
 import com.example.tz.business.domain.GetGrade
 import com.example.tz.business.domain.GetProfit
 import com.example.tz.business.domain.GetRefill
-import com.example.tz.presentation.adapter.*
+import com.example.tz.framework.presentation.adapter.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class BalanceViewModel:ViewModel() {
-    private val getGrade = GetGrade()
-    private val getRefill = GetRefill()
-    private val getProfit = GetProfit()
-    private val getBonus = GetBonus()
+class BalanceViewModel @Inject constructor(
+    private val getGrade: GetGrade,
+    private val getRefill: GetRefill,
+    private val getProfit: GetProfit,
+    private val getBonus: GetBonus
+) : ViewModel() {
+
     private val _rowItemsList = MutableLiveData<List<Balance>>()
-    val rowItemsList:LiveData<List<Balance>> = _rowItemsList
+    val rowItemsList: LiveData<List<Balance>> = _rowItemsList
     fun loadBalance() {
 
         viewModelScope.launch(Dispatchers.IO) {

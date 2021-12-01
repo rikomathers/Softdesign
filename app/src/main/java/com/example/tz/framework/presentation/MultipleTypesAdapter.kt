@@ -1,9 +1,10 @@
-package com.example.tz
+package com.example.tz.framework.presentation
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.tz.presentation.adapter.Balance
+import com.example.tz.R
+import com.example.tz.framework.presentation.adapter.Balance
 
 class MultipleTypesAdapter : RecyclerView.Adapter<ViewHolderFactory>() {
     var rowItemsList = ArrayList<Balance>()

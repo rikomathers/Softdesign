@@ -16,5 +16,6 @@
     <string name="dollars">%1$s $</string>
     <string name="percent">%1$s \%%</string>
     <string name="rubles">%1$s ₽</string>
+    <string name="NavHostFragmentTag" translatable="false">NavHostFragment</string>
 
 </resources>

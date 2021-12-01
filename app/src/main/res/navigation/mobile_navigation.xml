@@ -6,7 +6,7 @@
     app:startDestination="@+id/navigation_dashboards">
     <fragment
         android:id="@+id/navigation_dashboards"
-        android:name="com.example.tz.MainFragment"
+        android:name="com.example.tz.framework.MainFragment"
         android:label="@string/profit_from_shares"
         tools:layout="@layout/fragment_main"/>
 

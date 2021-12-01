@@ -1,4 +1,4 @@
-package com.example.tz.presentation.adapter
+package com.example.tz.framework.presentation.adapter
 
 import androidx.recyclerview.widget.RecyclerView
 

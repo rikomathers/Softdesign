@@ -1,12 +1,13 @@
-package com.example.tz
+package com.example.tz.framework.presentation
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
+import com.example.tz.R
 import com.example.tz.databinding.RecyclerItemBonusBinding
 import com.example.tz.databinding.RecyclerItemGradeBinding
 import com.example.tz.databinding.RecyclerItemProfitBinding
 import com.example.tz.databinding.RecyclerItemRefillBinding
-import com.example.tz.presentation.adapter.*
+import com.example.tz.framework.presentation.adapter.*
 
 open class ViewHolderFactory(itemView: View) : RecyclerView.ViewHolder(itemView) {
     open fun bind(balance: Balance) {}
@@ -73,7 +74,7 @@ open class ViewHolderFactory(itemView: View) : RecyclerView.ViewHolder(itemView)
     class BonusViewHolder(itemView: View) :
         ViewHolderFactory(itemView) {
         private val binding = RecyclerItemBonusBinding.bind(itemView)
-        lateinit var balance:BonusBalance
+        lateinit var balance: BonusBalance
         override fun bind(balance: Balance) {
             this.balance = (balance as BonusBalance)
             binding.tvInTeam.text = balance.team
