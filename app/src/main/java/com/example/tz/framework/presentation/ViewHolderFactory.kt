@@ -26,7 +26,7 @@ open class ViewHolderFactory(itemView: View) : RecyclerView.ViewHolder(itemView)
             )
             binding.tvInShare.text = binding.root.context?.getString(
                 R.string.dollars,
-                balance.total
+                balance.stock
             )
             binding.tvBalanceOfUSD.text = binding.root.context?.getString(
                 R.string.dollars,
@@ -36,6 +36,8 @@ open class ViewHolderFactory(itemView: View) : RecyclerView.ViewHolder(itemView)
                 R.string.rubles,
                 balance.balanceRUB
             )
+            val sum = ((balance.stock.toDouble()*100)/balance.total.toDouble()).toInt()
+            binding.progressBar.progress = sum
         }
     }
 
@@ -44,9 +46,18 @@ open class ViewHolderFactory(itemView: View) : RecyclerView.ViewHolder(itemView)
         private val binding = RecyclerItemRefillBinding.bind(itemView)
         override fun bind(balance: Balance) {
             (balance as RefillBalance)
-            binding.tvReplenished.text = balance.total
-            binding.tvWithdrawn.text = balance.withdrawn
-            binding.tvReplenishedRUB.text = balance.refillRUB
+            binding.tvReplenished.text = binding.root.context?.getString(
+                R.string.dollars,
+                balance.total
+            )
+            binding.tvWithdrawn.text = binding.root.context?.getString(
+                R.string.dollars,
+                balance.withdrawn
+            )
+            binding.tvReplenishedRUB.text = binding.root.context?.getString(
+                R.string.rubles,
+                balance.refillRUB
+            )
         }
     }
 
