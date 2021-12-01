@@ -78,14 +78,45 @@ open class ViewHolderFactory(itemView: View) : RecyclerView.ViewHolder(itemView)
         override fun bind(balance: Balance) {
             this.balance = (balance as BonusBalance)
             binding.tvInTeam.text = balance.team
-            binding.btRUB.setOnClickListener{
-                initRub()
-            }
+            initRUB()
+            binding.btRUB.setOnClickListener{initRUB()}
+            binding.btUSD.setOnClickListener{initUSD()}
         }
-        private fun initRub(){
-            binding.tvExpectedBonus.text = balance.totalRUB
-            binding.tvReplenishedRUB.text = balance.refillRUB
-            binding.ivSquareRUB.setBackgroundColor(33000000)
+        private fun initRUB(){
+            binding.tvExpectedBonus.text = binding.root.context?.getString(
+                R.string.rubles,
+                balance.totalRUB
+            )
+            binding.tvReplenishedRUB.text = binding.root.context?.getString(
+                R.string.rubles,
+                balance.refillRUB
+            )
+            binding.btRUB.alpha = 1f
+            binding.btUSD.alpha = 0.1f
+            binding.tvReplenished.text = binding.root.context?.getString(
+                R.string.replenished_RUB
+            )
+            binding.tvWithdrawn.text = binding.root.context?.getString(
+                R.string.withdrawn_RUB
+            )
+        }
+        private fun initUSD(){
+            binding.tvExpectedBonus.text = binding.root.context?.getString(
+                R.string.dollars,
+                balance.totalUSD
+            )
+            binding.tvReplenishedRUB.text = binding.root.context?.getString(
+                R.string.dollars,
+                balance.refillUSD
+            )
+            binding.btUSD.alpha = 1f
+            binding.btRUB.alpha = 0.1f
+            binding.tvReplenished.text = binding.root.context?.getString(
+                R.string.replenished_USD
+            )
+            binding.tvWithdrawn.text = binding.root.context?.getString(
+                R.string.withdrawn_USD
+            )
         }
     }
 }

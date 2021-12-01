@@ -17,5 +17,6 @@
     <string name="percent">%1$s \%%</string>
     <string name="rubles">%1$s ₽</string>
     <string name="NavHostFragmentTag" translatable="false">NavHostFragment</string>
-
+    <string name="replenished_USD">Пополнено USD</string>
+    <string name="withdrawn_USD">Выведено USD</string>
 </resources>

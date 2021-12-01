@@ -18,27 +18,32 @@
         android:src="@drawable/ic_info"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <FrameLayout
-        android:clickable="true"
         android:id="@+id/btRUB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@id/tvExpectedBonus"
-        app:layout_constraintStart_toEndOf="@id/tvExpectedBonus"
         android:layout_marginStart="10dp"
-        android:focusable="true">
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="@+id/tvExpectedBonus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvExpectedBonus"
+        app:layout_constraintHorizontal_bias="0.6">
+
         <ImageView
             android:id="@+id/ivSquareRUB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_rub"
-            />
+            android:src="@drawable/ic_rub" />
+
         <ImageView
             android:id="@+id/ivRUB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_rub1"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:src="@drawable/ic_rub1" />
     </FrameLayout>
 
     <FrameLayout
@@ -169,6 +174,7 @@
             android:layout_gravity="start">
 
             <TextView
+                android:id="@id/tvReplenished"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/sf_pro_display"
@@ -195,6 +201,7 @@
             android:layout_gravity="end"
             >
             <TextView
+                android:id="@id/tvWithdrawn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/sf_pro_display"
